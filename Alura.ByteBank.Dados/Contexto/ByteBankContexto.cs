@@ -1,6 +1,6 @@
-﻿using Alura.ByteBank.Dominio.Entidades;
+﻿using Alura.ByteBank.Dados.Secure;
+using Alura.ByteBank.Dominio.Entidades;
 using Microsoft.EntityFrameworkCore;
-
 
 namespace Alura.ByteBank.Dados.Contexto
 {
@@ -13,8 +13,9 @@ namespace Alura.ByteBank.Dados.Contexto
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string stringconexao = "server=localhost;" +
-                                   "DataBase=bytebankBD_webapp;Uid=root;Pwd=root";
+            var builder = new MySqlConnectionConfig();
+
+            string stringconexao = builder.Connection;
             optionsBuilder.UseMySql(stringconexao, 
                                     ServerVersion.AutoDetect(stringconexao));
         }
