@@ -1,0 +1,45 @@
+﻿@model Alura.ByteBank.Aplicacao.DTO.ClienteDTO
+
+@{
+    ViewData["Title"] = "Excluir";
+}
+
+<h1>Exclusão de Cliente</h1>
+
+<h3>Você tem certeza que deseja excluir este registro?</h3>
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Identificador)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Identificador)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Profissao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Profissao)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+    </form>
+</div>
