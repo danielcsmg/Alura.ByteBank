@@ -14,16 +14,16 @@ namespace Alura.ByteBank.Dados.Contexto
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //    Use as configurações abaixo para usar seu banco de dados
-            //    var builder = new MySqlConnectionStringBuilder
-            //    {
-            //        Server = "servidor aqui",
-            //        Database = "nome do banco de dados",
-            //        UserID = "usuario",
-            //        Password = "senha",
-            //        SslMode = MySqlSslMode.Required,
-            //    };
-            //    string stringconexao = builder.ConnectionString;
+            //Use as configurações abaixo para usar seu banco de dados
+            //var builder = new MySqlConnectionStringBuilder
+            //{
+            //    Server = "servidor aqui",
+            //    Database = "nome do banco de dados",
+            //    UserID = "usuario",
+            //    Password = "senha",
+            //    SslMode = MySqlSslMode.Required,
+            //};
+            //string stringconexao = builder.ConnectionString;
 
             var builder = new MySqlConnectionConfig();
 
