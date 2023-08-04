@@ -1,5 +1,4 @@
-﻿using Alura.ByteBank.Dados.Secure;
-using Alura.ByteBank.Dominio.Entidades;
+﻿using Alura.ByteBank.Dominio.Entidades;
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
 
