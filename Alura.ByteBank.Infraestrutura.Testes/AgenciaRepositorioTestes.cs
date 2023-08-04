@@ -112,9 +112,11 @@ namespace Alura.ByteBank.Infraestrutura.Testes
         [Fact]
         public void TestaRemoverInformacaoDeterminadaAgencia()
         {
+
             //Arrange
+            var id = _repositorio.ObterTodos().Last().Id;
             //Act
-            var atualizado = _repositorio.Excluir(5);
+            var atualizado = _repositorio.Excluir(id);
 
             //Assert
             Assert.True(atualizado);

@@ -65,8 +65,8 @@ namespace Alura.ByteBank.WebApp
                     ValidateIssuer = false,
                     ValidateAudience = false
                 };
-
               
+
             });
         }
 
